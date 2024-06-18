@@ -19,17 +19,19 @@ const About = () => {
       <h2 className="head-text">
         About<span> M</span>e
       </h2>
-
       <div className="app__profiles">
-        <img src={logo} alt="some svg" className="w-full h-64" />
+        <img src={logo} alt="some svg" />
         <article>
-          <p className="text-slate-500 mt-8 leading-loose">
+          <p className="">
             I am a resplendent, experienced, and highly dedicated Computer
             Science professional with a wealth of expertise in programming and
             passion for it. I am passionate about working with cutting-edge
             technology and contributing to the dynamic field of computer
-            science. I am seeking a challenging role in software development to
-            apply my expertise in problem-solving, coding, and software design.
+            science.
+          </p>
+          <p className="">
+            I am seeking a challenging role in software development to apply my
+            expertise in problem-solving, coding, and software design.
           </p>
           <a href={CV} download onClick={handleDownload}>
             <button type="button" className="app__flex">
@@ -44,6 +46,8 @@ const About = () => {
           </a>
         </article>
       </div>
+      {/* I am seeking a challenging role in software development to
+            apply my expertise in problem-solving, coding, and software design. */}
     </>
   );
 };
