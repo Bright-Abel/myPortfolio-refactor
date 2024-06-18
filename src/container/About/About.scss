@@ -9,14 +9,14 @@
   justify-content: center;
   column-gap: 4rem;
   align-content: stretch;
-
-  text-align: justify;
-  color: var(--gray-color);
-  line-height: 1.5;
-  // letter-spacing: 0.1rem;
-  word-spacing: 0.2rem;
-
   margin-top: 4rem;
+
+  p {
+    text-align: justify;
+
+    color: var(--gray-color);
+    line-height: 1.5;
+  }
 
   img {
     width: 100%;
