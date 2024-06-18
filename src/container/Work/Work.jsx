@@ -5,6 +5,7 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import { useFetchProjects } from '../../custom/FetchData';
 import { useEffect, useState } from 'react';
 import { myProject } from '../../custom/data';
+
 const Work = () => {
   const { project, isLoading, isError } = useFetchProjects();
   // console.log(project);
@@ -64,7 +65,7 @@ const Work = () => {
         {projectFilter.map((work) => {
           const { description, github, id, img, title, url, type } = work;
           return (
-            <div className="app__work-item app__flex" key={id}>
+            <div className="app__work-item " key={id}>
               <div className="app__work-img app__flex">
                 <img src={img} alt={title} />
 
@@ -115,6 +116,16 @@ const Work = () => {
                 <div className="app__work-tag app__flex">
                   <p className="p-text">{type}</p>
                 </div>
+              </div>
+              {/* MOBILE */}
+              <div className="mobile__link">
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                  <AiFillEye />
+                </a>
+
+                <a href={github} target="_blank" rel="noopener noreferrer">
+                  <AiFillGithub className="" />
+                </a>
               </div>
             </div>
           );
