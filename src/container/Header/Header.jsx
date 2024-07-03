@@ -29,7 +29,7 @@ const Header = () => {
             <div className="" style={{ marginLeft: '20px' }}>
               <p className="p-text">Hello I am</p>
               {/* <h1 className="head-text">Bright</h1> */}
-              <h1 className="head-text" style={{ color: '#000' }}>
+              <h1 className="head-text img__bg" style={{ color: '#000' }}>
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter.typeString('Bright').start();

@@ -18,7 +18,7 @@ const Sidebar = () => {
       <aside className={`${isSidebarOpen ? 'aside show-menu' : 'aside'}`}>
         <a href="#home" className="nav__logo">
           <div className="nav__logo app__flex">
-            <h1>OL</h1>
+            <h1 className="img__bg">OL</h1>
             <span className="span">
               <GoDotFill />
             </span>

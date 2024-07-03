@@ -52,6 +52,11 @@
   }
 }
 
+.img__bg {
+  background-image: url(myImg.jpeg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .app__header-badge {
   width: 100%;
   display: flex;
