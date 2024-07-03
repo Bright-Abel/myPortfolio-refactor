@@ -51,7 +51,12 @@ const Header = () => {
         transition={{ duration: 1, delayChildren: 1 }}
         className="app__header-img"
       >
-        <img src={logo} alt="profile-pic" />
+        <motion.img
+          whileInView={{ scale: [0, 1] }}
+          transition={{ duration: 2.5, ease: 'easeInOut' }}
+          src={logo}
+          alt="profile-pic"
+        />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1.5, ease: 'easeInOut' }}

@@ -3,13 +3,13 @@ import { images } from '../../constant';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { useState } from 'react';
 const Footer = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [loading, setIsLoading] = useState(false);
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   message: '',
+  // });
+  // const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  // const [loading, setIsLoading] = useState(false);
   return (
     <>
       <h2 className="head-text">Contact Me</h2>
