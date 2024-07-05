@@ -5,10 +5,13 @@ import { CgMenuBoxed } from 'react-icons/cg';
 import { GoDotFill } from 'react-icons/go';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
+import { motion } from 'framer-motion';
 import {
   openSideBar,
   closeSideBar,
 } from '../../portfolio_features/sidebarSlice';
+
 const Sidebar = () => {
   // const [toggle, setToggle] = useState(false);
   const { isSidebarOpen } = useSelector((store) => store.sidebar);
@@ -28,14 +31,28 @@ const Sidebar = () => {
         <nav className="nav">
           <div className="nav__menu">
             <ul className="nav__list">
-              {links.map((link, i) => {
+              {links.map((link, index) => {
                 const { id, href, text, className } = link;
                 return (
-                  <li key={id} className="nav__list">
-                    <a href={href} className="nav__link">
-                      <i className={` ${className}`}></i>
-                    </a>
-                  </li>
+                  <>
+                    <motion.li
+                      whileInView={{ x: [-50, 10, 0], opacity: [0, 0.5, 1] }}
+                      transition={{ duration: index + 1 }}
+                      data-tooltip-id={id}
+                      key={id}
+                      className="nav__list"
+                    >
+                      <a href={href} className="nav__link">
+                        <i className={`${className}`}></i>
+                      </a>
+                    </motion.li>
+                    <ReactTooltip
+                      id={id}
+                      place="right"
+                      content={text}
+                      className="skills-tooltip"
+                    />
+                  </>
                 );
               })}
             </ul>
