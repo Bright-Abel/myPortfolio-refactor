@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { about } from '../../custom/data';
 import logo from '../../assets/about.svg';
-import CV from '../../assets/CV.pdf';
+import oluwasegunBarnabasResume from '../../assets/oluwasegunBarnabasResume.pdf';
 import { FaCheck } from 'react-icons/fa';
 
 import { AppWrap, MotionWrap } from '../../wrapper';
@@ -16,25 +16,25 @@ const About = () => {
   };
   return (
     <>
-      <h2 className="head-text">
+      <h2 className='head-text'>
         About<span> M</span>e
       </h2>
-      <div className="app__profiles">
-        <img src={logo} alt="some svg" />
+      <div className='app__profiles'>
+        <img src={logo} alt='some svg' />
         <article>
-          <p className="">
+          <p className=''>
             I am a resplendent, experienced, and highly dedicated Computer
             Science professional with a wealth of expertise in programming and
             passion for it. I am passionate about working with cutting-edge
             technology and contributing to the dynamic field of computer
             science.
           </p>
-          <p className="">
+          <p className=''>
             I am seeking a challenging role in software development to apply my
             expertise in problem-solving, coding, and software design.
           </p>
-          <a href={CV} download onClick={handleDownload}>
-            <button type="button" className="app__flex">
+          <a href={oluwasegunBarnabasResume} download onClick={handleDownload}>
+            <button type='button' className='app__flex'>
               {cvDownload ? (
                 <>
                   Resume Downloaded <FaCheck />
