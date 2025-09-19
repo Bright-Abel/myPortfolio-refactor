@@ -10,10 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "contentful": "^11.7.19",
+    "framer-motion": "^12.23.16",
+    "gsap": "^3.13.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-redux": "^9.2.0",
     "react-tooltip": "^5.27.1",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
@@ -24,6 +31,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "sass": "^1.77.6",
-    "vite": "^5.2.0"
+    "vite": "^7.1.6"
   }
 }

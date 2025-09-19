@@ -17,19 +17,19 @@ const Header = () => {
     },
   };
   return (
-    <div className="app__header app__flex" id="home">
+    <div className='app__header app__flex' id='home'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 1 }}
-        className="app__header-info"
+        className='app__header-info'
       >
-        <div className="app__header-badge">
-          <div className="badge-cmp app__flex">
+        <div className='app__header-badge'>
+          <div className='badge-cmp app__flex'>
             <span>👋</span>
-            <div className="" style={{ marginLeft: '20px' }}>
-              <p className="p-text">Hello I am</p>
+            <div className='' style={{ marginLeft: '20px' }}>
+              <p className='p-text'>Hello I am</p>
               {/* <h1 className="head-text">Bright</h1> */}
-              <h1 className="head-text img__bg" style={{ color: '#000' }}>
+              <h1 className='head-text img__bg' style={{ color: '#000' }}>
                 <Typewriter
                   onInit={(typewriter) => {
                     typewriter.typeString('Bright').start();
@@ -39,9 +39,9 @@ const Header = () => {
             </div>
           </div>
 
-          <div className="tag-cmp app__flex">
-            <p className="p-text">Front-End Developer</p>
-            <p className="p-text">Freelancer</p>
+          <div className='tag-cmp app__flex'>
+            <p className='p-text'>Front-End Developer</p>
+            <p className='p-text'>Freelancer</p>
           </div>
         </div>
       </motion.div>
@@ -49,31 +49,31 @@ const Header = () => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 1, delayChildren: 1 }}
-        className="app__header-img"
+        className='app__header-img'
       >
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 2.5, ease: 'easeInOut' }}
           src={logo}
-          alt="profile-pic"
+          alt='profile-pic'
         />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1.5, ease: 'easeInOut' }}
           src={images.circle}
-          alt="profile-circle"
-          className="overlay_circle"
+          alt='profile-circle'
+          className='overlay_circle'
         />
       </motion.div>
 
       <motion.div
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
+        className='app__header-circles'
       >
         {[images.javascript, images.react, images.redux].map((circle, i) => (
-          <div className="circle-cmp app__flex" key={i}>
-            <img src={circle} alt="" />
+          <div className='circle-cmp app__flex' key={i}>
+            <img src={circle} alt='' />
           </div>
         ))}
       </motion.div>

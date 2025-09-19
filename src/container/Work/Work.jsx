@@ -34,12 +34,12 @@ const Work = () => {
   };
   return (
     <>
-      <h2 className="head-text">
+      <h2 className='head-text'>
         My creative <span> Portfolio</span>
         <br /> Section
       </h2>
 
-      <div className="app__work-filter">
+      <div className='app__work-filter'>
         {myProject.map((item) => {
           const { id, tool, text } = item;
           return (
@@ -60,13 +60,13 @@ const Work = () => {
         animate={animateCard}
         // whileInView={{ y: [100, 0], opacity: [0, 1] }}
         transition={{ duration: 1, delayChildren: 1 }}
-        className="app__work-portfolio"
+        className='app__work-portfolio'
       >
         {projectFilter.map((work) => {
           const { description, github, id, img, title, url, type } = work;
           return (
-            <div className="app__work-item " key={id}>
-              <div className="app__work-img app__flex">
+            <div className='app__work-item ' key={id}>
+              <div className='app__work-img app__flex'>
                 <img src={img} alt={title} />
 
                 <motion.div
@@ -78,28 +78,28 @@ const Work = () => {
                     ease: 'easeInOut',
                     staggerChildren: 1,
                   }}
-                  className="app__work-hover app__flex"
+                  className='app__work-hover app__flex'
                 >
-                  <a href={url} target="_blank" rel="noopener noreferrer">
+                  <a href={url} target='_blank' rel='noopener noreferrer'>
                     <motion.div
                       whileInView={{ scale: [0, 1] }}
                       whileHover={{ scale: [1, 0.9] }}
                       transition={{
                         duration: 0.5,
                       }}
-                      className="app__flex"
+                      className='app__flex'
                     >
                       <AiFillEye />
                     </motion.div>
                   </a>
-                  <a href={github} target="_blank" rel="noopener noreferrer">
+                  <a href={github} target='_blank' rel='noopener noreferrer'>
                     <motion.div
                       whileInView={{ scale: [0, 1] }}
                       whileHover={{ scale: [1, 0.9] }}
                       transition={{
                         duration: 0.5,
                       }}
-                      className="app__flex"
+                      className='app__flex'
                     >
                       <AiFillGithub />
                     </motion.div>
@@ -107,24 +107,24 @@ const Work = () => {
                 </motion.div>
               </div>
 
-              <div className="app__work-content app__flex">
-                <h4 className="bold-text">{title}</h4>
-                <p className="p-text" style={{ marginTop: '10px' }}>
+              <div className='app__work-content app__flex'>
+                <h4 className='bold-text'>{title}</h4>
+                <p className='p-text' style={{ marginTop: '10px' }}>
                   {description}
                 </p>
 
-                <div className="app__work-tag app__flex">
-                  <p className="p-text">{type}</p>
+                <div className='app__work-tag app__flex'>
+                  <p className='p-text'>{type}</p>
                 </div>
               </div>
               {/* MOBILE */}
-              <div className="mobile__link">
-                <a href={url} target="_blank" rel="noopener noreferrer">
+              <div className='mobile__link'>
+                <a href={url} target='_blank' rel='noopener noreferrer'>
                   <AiFillEye />
                 </a>
 
-                <a href={github} target="_blank" rel="noopener noreferrer">
-                  <AiFillGithub className="" />
+                <a href={github} target='_blank' rel='noopener noreferrer'>
+                  <AiFillGithub className='' />
                 </a>
               </div>
             </div>
