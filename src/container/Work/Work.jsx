@@ -15,7 +15,7 @@ const Work = () => {
 
   useEffect(() => {
     setProjectFilter(project);
-    console.log(projectFilter);
+    // console.log(projectFilter);/
   }, [project]);
 
   const handleWorkFilter = (tool) => {

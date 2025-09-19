@@ -1,12 +1,12 @@
 import { About, Footer, Header, Skill, Work } from './container';
-import { NavBar, Sidebar } from './component';
+
 import './App.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { closeSideBar } from './portfolio_features/sidebarSlice';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const App = () => {
   const { isSidebarOpen } = useSelector((store) => store.sidebar);
@@ -26,21 +26,21 @@ const App = () => {
     };
   }, [isSidebarOpen, dispatch]);
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
 
-    // ✅ Convert all elements with .panel into an array
-    const panels = gsap.utils.toArray('.panel');
+  //   // ✅ Convert all elements with .panel into an array
+  //   const panels = gsap.utils.toArray('.panel');
 
-    panels.forEach((panel) => {
-      ScrollTrigger.create({
-        trigger: panel,
-        start: 'top top',
-        pin: true,
-        pinSpacing: false, // removes extra space between sections
-      });
-    });
-  }, []);
+  //   panels.forEach((panel) => {
+  //     ScrollTrigger.create({
+  //       trigger: panel,
+  //       start: 'top top',
+  //       pin: true,
+  //       pinSpacing: false, // removes extra space between sections
+  //     });
+  //   });
+  // }, []);
 
   return (
     <div className='app'>
